@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <material name="white">
+        <color rgba="1 1 1 0.5"/>
+    </material>
+
+    <material name="black">
+        <color rgba="0 0 0 0.5"/>
+    </material>
+
+    <material name="red">
+        <color rgba="1 0.2 0.2 0.5"/>
+    </material>
+
+    <material name="green">
+        <color rgba="0.2 1 0.2 0.5"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0.2 0.2 1 0.5"/>
+    </material>
+
+    <link name="base_link">
+
+    </link>
+
+    <joint name="chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis"/>
+        <origin xyz="0.0 0.0 0.29"/>
+    </joint>
+
+    <link name="chassis">
+        <visual>
+            <geometry>
+                <box size="1.06 0.63 0.67"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+    </link>
+
+    <joint name="wheel_fl_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="wheel_fl"/>
+        <origin xyz="0.28 0.184 0.0" rpy="-${pi/2} 0.0 0.0"/>
+        <axis xyz="0.0 0.0 1.0"/>
+    </joint>
+
+    <link name="wheel_fl">
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.12"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+    </link>
+
+    <joint name="wheel_fr_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="wheel_fr"/>
+        <origin xyz="0.28 -0.184 0.0" rpy="${pi/2} 0.0 0.0"/>
+        <axis xyz="0.0 0.0 -1.0"/>
+    </joint>
+
+    <link name="wheel_fr">
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.12"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+    </link>
+
+    <joint name="wheel_bl_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="wheel_bl"/>
+        <origin xyz="-0.28 0.184 0.0" rpy="-${pi/2} 0.0 0.0"/>
+        <axis xyz="0.0 0.0 1.0"/>
+    </joint>
+
+    <link name="wheel_bl">
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.12"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+    </link>
+
+    <joint name="wheel_br_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="wheel_br"/>
+        <origin xyz="-0.28 -0.184 0.0" rpy="${pi/2} 0.0 0.0"/>
+        <axis xyz="0.0 0.0 -1.0"/>
+    </joint>
+
+    <link name="wheel_br">
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.12"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+    </link>
+
+</robot>
