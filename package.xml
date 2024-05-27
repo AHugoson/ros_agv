@@ -2,10 +2,10 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>ros_agv</name>
-  <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="my_email@email.com">MY NAME</maintainer>
-  <license>TODO: License declaration</license>
+  <version>0.0.1</version>
+  <description>This package includes the description of the default mounting positions for the devices that are used in the Digital Twin.</description>
+  <maintainer email="aron.hugoson@simumatik.com">Aron Hugoson</maintainer>
+  <license>Apache License</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 

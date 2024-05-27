@@ -40,7 +40,7 @@
         </visual>
     </link>
 
-    <joint name="wheel_fl_joint" type="continuous">
+    <!-- <joint name="wheel_fl_joint" type="continuous">
         <parent link="base_link"/>
         <child link="wheel_fl"/>
         <origin xyz="0.28 0.184 0.0" rpy="-${pi/2} 0.0 0.0"/>
@@ -102,6 +102,6 @@
             </geometry>
             <material name="black"/>
         </visual>
-    </link>
+    </link> -->
 
 </robot>
